@@ -1,17 +1,25 @@
 {
   "name": "kaleido1.0",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "An advanced, interactive kaleidoscope PWA with dynamic shader controls.",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "kaleidoscope",
+    "webgl",
+    "pwa",
+    "interactive",
+    "shader"
+  ],
+  "author": "Justin Munsell",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "dat.gui": "^0.7.9",
-    "three": "^0.171.0",
+    "three": "^0.150.1",
     "vite": "^6.0.3"
   },
   "devDependencies": {
