@@ -1,30 +1,73 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="manifest" href="manifest.webmanifest" /> <!-- Relative path -->
+  <!-- Link to the Web App Manifest -->
+  <link rel="manifest" href="/KaleidoScape/manifest.webmanifest" />
+  
+  <!-- Ensure proper rendering and touch zooming on mobile devices -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Kaleido1.0</title>
+  
+  <!-- Inline CSS for basic styling -->
   <style>
-    body {
+    /* Reset default margins and paddings */
+    body, html {
       margin: 0;
+      padding: 0;
       overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
+    
+    /* Container for the Three.js canvas */
     #app {
       width: 100vw;
       height: 100vh;
       display: block;
+      background-color: #000000; /* Black background for contrast */
+      position: relative;
     }
+    
+    /* Positioning for the dat.GUI interface */
     .dg.ac {
       position: absolute;
       top: 0;
       right: 0;
+      z-index: 100;
+    }
+    
+    /* Loader Overlay Styling */
+    #loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      z-index: 200;
+    }
+    
+    /* Responsive Design: Hide GUI on small screens */
+    @media (max-width: 600px) {
+      .dg.ac {
+        display: none;
+      }
     }
   </style>
-  <script type="module" crossorigin src="/KaleidoScape/assets/index-DJMSQS4e.js"></script>
+  <script type="module" crossorigin src="/KaleidoScape/assets/index-DDLmaWO5.js"></script>
 <link rel="manifest" href="/KaleidoScape/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/KaleidoScape/registerSW.js"></script></head>
 <body>
-  <div id="app"></div> <!-- Relative path -->
+  <!-- Loader Overlay -->
+  <div id="loader">Loading...</div>
+  
+  <!-- Container for Three.js Renderer -->
+  <div id="app"></div>
+  
+  <!-- Main JavaScript Module -->
 </body>
 </html>
